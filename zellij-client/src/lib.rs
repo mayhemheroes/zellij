@@ -32,6 +32,11 @@ use zellij_utils::{
 };
 use zellij_utils::{cli::CliArgs, input::layout::LayoutFromYaml};
 
+#[cfg(fuzzing)]
+pub mod fuzzing {
+    pub use super::stdin_ansi_parser::StdinAnsiParser;
+}
+
 /// Instructions related to the client-side application
 #[derive(Debug, Clone)]
 pub(crate) enum ClientInstruction {

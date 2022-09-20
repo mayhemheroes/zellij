@@ -1,0 +1,7 @@
+project: zellij
+target: ansi-parsing
+
+cmds:
+  - cmd: /ansi_parsing
+  - cmd: /ansi_parsing_no_inst @@
+    libfuzzer: false
